@@ -1,10 +1,13 @@
 <div class="container">
   <div class="navbar">
       <div class="navbar-content">
-          <a href="#Experiencia" class="navbar-content-item" >Experiencia</a>
-          <a href="#Proyectos" class="navbar-content-item">Proyectos</a>
-          <a href="#SobreMi" class="navbar-content-item">Sobre mí</a>
-          <a href="#Contacto" class="navbar-content-item">Contacto</a>
+        <a
+            *ngFor="let item of navbarItems"
+            (click)="goToSection(item.hrefId)"
+            class="navbar-content-item"
+        >
+            {{item.name}}
+        </a>
           <div class="navbar-content-item">CV</div>
 
       </div>
@@ -41,22 +44,10 @@
 
 
       <div class="experience-content">
-          <div class="experience-content-item">
-              <p class="experience-title">Junior Web Frontend</p>
-              <p class="experience-company">We Are Marketing - WAM Global</p>
-              <p class="experience-dates">Junio 2024 - Diciembre 2024</p>
-          </div>
-
-          <div class="experience-content-item">
-              <p class="experience-title">Prácticas en Web Frontend</p>
-              <p class="experience-company">We Are Marketing - WAM Global</p>
-              <p class="experience-dates">Marzo 2024 - Junio 2024</p>
-          </div>
-
-          <div class="experience-content-item">
-              <p class="experience-title">Práticas de SMR</p>
-              <p class="experience-company">Progresa Centro Integrado de Formación</p>
-              <p class="experience-dates">Marzo 2022 - Junio 2022</p>
+          <div *ngFor="let item of experienceInfo" class="experience-content-item">
+              <p class="experience-title">{{item.title}}</p>
+              <p class="experience-company">{{item.company}}</p>
+              <p class="experience-dates">{{item.dates}}</p>
           </div>
       </div>
   </div>
@@ -65,27 +56,11 @@
       <h2>Tecnologías</h2>
       <div class="stack-caroussel">
           <div class="carousel-track">
-            <img src="/assets/resources/TypeScript-3090624194.png" alt="Icono de Typescript">
-            <img src="/assets/resources/angular_black.png" alt="Icono de Angular">
-            <img src="/assets/resources/html.png" alt="Icono de Typescript">
-            <img src="/assets/resources/icons8-mysql-logo-100.png" alt="Icono de HTML">
-            <img src="/assets/resources/css.png" alt="Icono de CSS">
-            <img src="/assets/resources/ionic dark logo black.png" alt="Icono de Ionic">
-            <img src="/assets/resources/Git-Icon-Black.png" alt="Icono de Git">
-            <img src="/assets/resources/icons8-java-logo-50.png" alt="Icono de Java">
-            <img src="/assets/resources/vuejs.png" alt="Icono de Vue"> 
-
-          
-
-              <img src="/assets/resources/TypeScript-3090624194.png" alt="Icono de Typescript">
-              <img src="/assets/resources/angular_black.png" alt="Icono de Angular">
-              <img src="/assets/resources/html.png" alt="Icono de Typescript">
-              <img src="/assets/resources/icons8-mysql-logo-100.png" alt="Icono de HTML">
-              <img src="/assets/resources/css.png" alt="Icono de CSS">
-              <img src="/assets/resources/ionic dark logo black.png" alt="Icono de Ionic">
-              <img src="/assets/resources/Git-Icon-Black.png" alt="Icono de Git">
-              <img src="/assets/resources/icons8-java-logo-50.png" alt="Icono de Java">
-              <img src="/assets/resources/vuejs.png" alt="Icono de Vue"> 
+            <img 
+                *ngFor="let logo of logosInfo"
+                [src]="logo.src"
+                [alt]="logo.alt"
+            >
           </div>
 
       </div>
