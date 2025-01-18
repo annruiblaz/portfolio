@@ -1,7 +1,16 @@
 <div class="container">
   <div class="navbar">
-      <div class="navbar-content">
-        <a
+        <button
+            (click)="toggleMenu()"
+            class="navbar-btn"
+        >
+            <svg width="800px" height="800px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path fill="#FFF" fill-rule="evenodd" d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"/>
+            </svg>
+        </button>
+
+        <div class="navbar-content" [ngClass]="{'open': isMenuOpen}">
+            <a
             *ngFor="let item of navbarItems"
             (click)="goToSection(item.hrefId)"
             class="navbar-content-item"
@@ -9,8 +18,7 @@
             {{item.name}}
         </a>
           <div class="navbar-content-item">CV</div>
-
-      </div>
+    </div>
   </div>
 
   <div class="header" id="SobreMi">
@@ -19,19 +27,19 @@
           <p>Soy Anna</p>
       </div>
 
-      <div class="header-img">
-          <img class="anna-icon" src="/assets/resources/icon-anna.jpeg"/>
-          <div class="header-img-rrss">
-              <a class="header-img-rrss--svg" href="mailto:anna.ruiz.dev@gmail.com">
-                  <img src="/assets/resources/email.png"/>
-              </a>
-              <a class="header-img-rrss--svg linkedin" href="https://www.linkedin.com/in/anna-ruiz-bl/">
-                  <img src="/assets/resources/linkedin.png"/>
-              </a>
-              <a class="header-img-rrss--svg" href="https://github.com/annruiblaz">
-                  <img src="/assets/resources/github-mark.png"/>
-              </a>
-          </div>
+    <div class="header-img">
+        <img class="anna-icon" src="/assets/resources/icon-anna.jpeg"/>
+        <div class="header-img-rrss">
+            <a class="header-img-rrss--svg" href="mailto:anna.ruiz.dev@gmail.com">
+                <img src="/assets/resources/email.png"/>
+            </a>
+            <a class="header-img-rrss--svg linkedin" href="https://www.linkedin.com/in/anna-ruiz-bl/">
+                <img src="/assets/resources/linkedin.png"/>
+            </a>
+            <a class="header-img-rrss--svg" href="https://github.com/annruiblaz">
+                <img src="/assets/resources/github-mark.png"/>
+            </a>
+    </div>
 
           <div class="contact-btn">
               Contáctame
@@ -44,7 +52,7 @@
 
 
       <div class="experience-content">
-          <div *ngFor="let item of experienceInfo" class="experience-content-item">
+          <div *ngFor="let item of experienceInfo" class="card experience-content-item">
               <p class="experience-title">{{item.title}}</p>
               <p class="experience-company">{{item.company}}</p>
               <p class="experience-dates">{{item.dates}}</p>

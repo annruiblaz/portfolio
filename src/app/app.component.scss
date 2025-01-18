@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
 
+body.no-scroll {
+    position: fixed;
+    overflow-y: hidden;
+    width: 100%;
+}
+
 .container {
     margin: 0 auto;
     padding: 0 15px;
@@ -10,39 +16,129 @@
     position: static;
 
     .navbar {
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
-        justify-content: center;
-        position: sticky;
-
-        &-content {
             display: flex;
             flex-direction: row;
             gap: 25px;
-            align-items: center;
+            justify-content: center;
+            position: static;
 
-            &-item {
-                padding: 5px;
-                cursor: pointer;
-                transition: all .5s ease-in-out;
-                text-decoration: none;
-                color: black;
-            
-                &:hover {
-                    color: #23607B;
-                    font-weight: 600;
-                }
-            
-                &:last-child {
-                    margin-left: 60px;
-                    padding: 5px 30px;
-                    border: 1px solid #2FB7C3;
-                    border-radius: 20px;
-                    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-                }
+            @media (min-width: 960px) {
+                width: 100%;
+                height: auto;
+                min-height: 80px;
+            }
+        
+
+        &-btn {
+            z-index: 20;
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background-color: #2FB7C3;
+            border: none;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            @media (min-width: 960px) {
+                display: none;
             }
         }
+    }
+
+    .navbar-content {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: 80vh;
+        max-width: 450px;
+        gap: 25px;
+        opacity: 0;
+        align-items: center;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: transform .8s ease-in, opacity .5s ease-in;
+
+        @media (min-width: 960px) {
+            position: fixed;
+            width: 100vw;
+            height: 80px;
+            opacity: 1;
+            max-width: 1024px;
+            margin: 0 auto;
+            transform: none;
+            justify-content: center;
+        }
+    }
+
+    .open {
+
+        &.navbar-content {
+            display: flex;
+            z-index: 10;
+            position: fixed;
+            margin: 10px auto;
+            padding-top: 50px;
+            top: 50px;
+            left: 10px;
+            right: 10px;
+            flex-direction: column;
+            background-color: #F4F4F460;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .navbar-content-item {
+            display: inline;
+
+            &:last-child {
+                margin: 0 auto;
+            }
+        }
+
+    }
+
+    .navbar-content-item {
+        display: none;
+        padding: 5px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+
+        @media (min-width: 960px) {
+            display: inline;
+        }
+
+        &:hover {
+            color: #23607B;
+            font-weight: 600;
+        }
+
+        &:last-child {
+            margin-left: 60px;
+            padding: 5px 30px;
+            border: 1px solid #2FB7C3;
+            border-radius: 20px;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .card {
+        border-radius: 20px;
+        background-color: #F4F4F460;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     }
 
     .salute-emoji {
@@ -63,15 +159,25 @@ h2 {
 
 .header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-top: 50px ;
     gap: 60px;
     justify-content: center;
+    text-align: center;
+
+    @media (min-width: 960px) {
+        flex-direction: row;
+        text-align: left;
+    }
 
     &-title {
         display: inline-flex;
         gap: 20px;
-        font-size: 60px;
+        font-size: 48px;
+
+        @media (min-width: 960px) {
+            font-size: 60px;
+        }
     }
 
     &-img {
@@ -81,7 +187,12 @@ h2 {
     }
 
     p {
-        font-size: 40px;
+        margin: 10px 0;
+        font-size: 32px;
+
+        @media (min-width: 960px) {
+            font-size: 40px;
+        }
     }
 }
 
@@ -158,14 +269,21 @@ h2 {
 
 .experience-content-item {
     position: relative;
-    padding: 10px;
+    width: 85%;
+    height: auto;
+    max-width: 85%;
+    min-height: 130px;
+    padding: 15px 20px;
     margin: 0 10px 0 20px;
-    border-radius: 20px;
-    background-color: #F4F4F460;
     opacity: 0;
     transform: translateX(97%);
     transition: 1.5s transform ease-in-out, 1s opacity ease-in-out;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+
+    @media (min-width: 960px) {
+        width: 100%;
+        max-width: 700px;
+        max-height: 145px;
+    }
 
     &:before {
         background-color: #FFF;
@@ -218,6 +336,7 @@ h2 {
 .experience-company {
     font-size: 14px;
     font-weight: 500;
+    margin: 5px 0;
 
     @media (min-width: 960px) {
         font-size: 34px;
@@ -226,11 +345,15 @@ h2 {
 }
 
 .experience-dates {
+    margin: 0;
     font-size: 12px;
     font-weight: 400;
+    line-height: .5em;
 
     @media (min-width: 960px) {
         font-size: 30px;
+        line-height: normal;
+
     }
 }
 

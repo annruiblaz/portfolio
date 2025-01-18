@@ -6,7 +6,7 @@ import { Experience, LogoCaroussel, navbarItem } from './interfaces/interfaces';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'portfolio';
   private experienceItems?: NodeListOf<Element>;
 
@@ -45,9 +45,27 @@ export class AppComponent implements AfterViewInit {
     { src: '/assets/resources/Git-Icon-Black.png', alt: 'Icono de Git'},
     { src: '/assets/resources/icons8-java-logo-50.png', alt: 'Icono de Java'},
     { src: '/assets/resources/vuejs.png', alt: 'Icono de Vue'},
+  ];
 
-  ]
+  public isMenuOpen: boolean = false;
 
+  ngOnInit(): void {
+    
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+
+    const body = document.body as HTMLElement;
+
+    if (window.innerWidth >= 960) {
+      if (!this.isMenuOpen) {
+        document.body.classList.remove('no-scroll');
+      }
+  
+      document.body.classList.add('no-scroll');
+    }
+  }
   isElementInViewport(el: Element):boolean {
         const rect = el.getBoundingClientRect();
         return (
