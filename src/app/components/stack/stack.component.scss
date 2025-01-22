@@ -1,4 +1,4 @@
-.stack-caroussel {
+.stack-container {
     position: relative;
     width: 100%;
     padding: 20px 0 50px;
@@ -17,5 +17,15 @@
     img {
         width: 80px;
         height: 80px;
+        transition: filter .3s ease-in-out;
+        filter: var(--drop-shadow);
+
+        &:hover {
+            filter: none;
+
+            @media (min-width: 960px) {
+                filter: var(--drop-shadow);
+            }
+        }
     }
 }

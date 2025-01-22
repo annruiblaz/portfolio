@@ -1,11 +1,11 @@
 <div class="stack" id="Tecnologias">
     <h2>Tecnologías</h2>
-    <div class="stack-caroussel">
+    <div class="stack-container">
         <img 
             *ngFor="let logo of logosInfo"
             [src]="logo.src"
             [alt]="logo.alt"
-            [style.filter]="getShadow(logo.color)"
+            [ngStyle]="{ '--drop-shadow': getShadow(logo.color) }"
         >
     </div>
 </div>

@@ -16,27 +16,28 @@ export class NavbarComponent {
 
   public isMenuOpen: boolean = false;
 
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
-  
-      const body = document.body as HTMLElement;
-  
-      if (window.innerWidth >= 960) {
-        if (!this.isMenuOpen) {
-          document.body.classList.remove('no-scroll');
-        }
-    
-        document.body.classList.add('no-scroll');
-      }
-    }
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
 
-    goToSection(id: string) {
-      let el = document.getElementById(id);
-      if(!el) return;
-      window.scrollTo({
-        left: el.offsetLeft,
-        top: el.offsetTop,
-        behavior: 'smooth'
-      });
+    const body = document.body as HTMLElement;
+
+    if (window.innerWidth <= 960) {
+      if (!this.isMenuOpen) {
+        document.body.classList.remove('no-scroll');
+        return;
+      }
+
+      document.body.classList.add('no-scroll');
     }
+  }
+
+  goToSection(id: string) {
+    let el = document.getElementById(id);
+    if(!el) return;
+    window.scrollTo({
+      left: el.offsetLeft,
+      top: el.offsetTop,
+      behavior: 'smooth'
+    });
+  }
 }
