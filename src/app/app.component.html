@@ -1,44 +1,10 @@
 <navbar></navbar>
 
 <div class="container">
-  <div class="header" id="SobreMi">
-      <div class="header-text">
-          <div class="header-title">Hola <span class="salute-emoji">👋</span> </div>
-          <p>Soy Anna</p>
-      </div>
 
-    <div class="header-img">
-        <img class="anna-icon" src="/assets/images/icon-anna.jpeg"/>
-        <div class="header-img-rrss">
-            <a class="header-img-rrss--svg" href="mailto:anna.ruiz.dev@gmail.com">
-                <img src="/assets/svg/Email.svg"/>
-            </a>
-            <a class="header-img-rrss--svg linkedin" href="https://www.linkedin.com/in/anna-ruiz-bl/">
-                <img src="/assets/svg/Linkedin-logo.svg"/>
-            </a>
-            <a class="header-img-rrss--svg" href="https://github.com/annruiblaz">
-                <img src="/assets/svg/github-mark.svg"/>
-            </a>
-    </div>
+    <header></header>
 
-          <div class="contact-btn">
-              Contáctame
-          </div>
-      </div>
-  </div>
-
-  <div  class="experience" id="Experiencia">
-      <h2>Experiencia Laboral</h2>
-
-
-      <div class="experience-content">
-          <div *ngFor="let item of experienceInfo" class="card experience-content-item">
-              <p class="experience-title">{{item.title}}</p>
-              <p class="experience-company">{{item.company}}</p>
-              <p class="experience-dates">{{item.dates}}</p>
-          </div>
-      </div>
-  </div>
+    <experience></experience>
 
   <div class="stack" id="Tecnologias">
       <h2>Tecnologías</h2>

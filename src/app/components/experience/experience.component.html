@@ -1,0 +1,11 @@
+<div  class="experience" id="Experiencia">
+    <h2>Experiencia Laboral</h2>
+
+    <div class="experience-content">
+        <div *ngFor="let item of experienceInfo" class="card experience-content-item">
+            <p class="experience-title">{{item.title}}</p>
+            <p class="experience-company">{{item.company}}</p>
+            <p class="experience-dates">{{item.dates}}</p>
+        </div>
+    </div>
+</div>

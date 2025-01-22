@@ -1,0 +1,107 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px ;
+    gap: 60px;
+    justify-content: center;
+    text-align: center;
+
+    @media (min-width: 960px) {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    &-title {
+        display: inline-flex;
+        gap: 20px;
+        font-size: 48px;
+
+        @media (min-width: 960px) {
+            font-size: 60px;
+        }
+    }
+
+    &-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p {
+        margin: 10px 0;
+        font-size: 32px;
+
+        @media (min-width: 960px) {
+            font-size: 40px;
+        }
+    }
+}
+
+.header-img .anna-icon {
+    max-width: 260px;
+    max-height: 235px;
+    border-radius: 50%;
+    border: 1px solid #2FB7C3;
+}
+
+.header-img-rrss {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-img-rrss--svg {
+    transition: .6s transform ease-in-out, 1s opacity ease-in-out;
+
+    img {
+        width: 35px;
+        max-width: 35px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    &.linkedin img {
+        width: 33px;
+        height: 33px;
+    }
+
+    &:hover {
+        box-shadow: 5px 5px 5px #4648494f;
+        transform: scale(1.2);
+    }
+}
+
+.contact-btn {
+    padding: 5px 10px;
+    max-width: 150px;
+    color: #081F21;
+    background-color: #EFFAFB;
+    border: 1px solid #2FB7C3;    border-radius: 20px;
+    text-align: center;
+}
+
+.salute-emoji {
+    z-index: 0;
+    font-family: "Noto Color Emoji", sans-serif;
+    animation: salute 3.5s linear infinite;
+}
+
+@keyframes salute {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(25deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
