@@ -9,7 +9,8 @@ export interface Experience {
     dates: string;
 }
 
-export interface LogoCaroussel {
+export interface StackLogo {
     src: string;
     alt: string;
+    color: string;
 }
