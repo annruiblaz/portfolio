@@ -1,26 +1,6 @@
+<navbar></navbar>
+
 <div class="container">
-  <div class="navbar">
-        <button
-            (click)="toggleMenu()"
-            class="navbar-btn"
-        >
-            <svg width="800px" height="800px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
-                <path fill="#FFF" fill-rule="evenodd" d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"/>
-            </svg>
-        </button>
-
-        <div class="navbar-content" [ngClass]="{'open': isMenuOpen}">
-            <a
-            *ngFor="let item of navbarItems"
-            (click)="goToSection(item.hrefId)"
-            class="navbar-content-item"
-        >
-            {{item.name}}
-        </a>
-          <div class="navbar-content-item">CV</div>
-    </div>
-  </div>
-
   <div class="header" id="SobreMi">
       <div class="header-text">
           <div class="header-title">Hola <span class="salute-emoji">👋</span> </div>
@@ -28,16 +8,16 @@
       </div>
 
     <div class="header-img">
-        <img class="anna-icon" src="/assets/resources/icon-anna.jpeg"/>
+        <img class="anna-icon" src="/assets/images/icon-anna.jpeg"/>
         <div class="header-img-rrss">
             <a class="header-img-rrss--svg" href="mailto:anna.ruiz.dev@gmail.com">
-                <img src="/assets/resources/email.png"/>
+                <img src="/assets/svg/Email.svg"/>
             </a>
             <a class="header-img-rrss--svg linkedin" href="https://www.linkedin.com/in/anna-ruiz-bl/">
-                <img src="/assets/resources/linkedin.png"/>
+                <img src="/assets/svg/Linkedin-logo.svg"/>
             </a>
             <a class="header-img-rrss--svg" href="https://github.com/annruiblaz">
-                <img src="/assets/resources/github-mark.png"/>
+                <img src="/assets/svg/github-mark.svg"/>
             </a>
     </div>
 

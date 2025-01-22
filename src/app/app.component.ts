@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { Experience, LogoCaroussel, navbarItem } from './interfaces/interfaces';
+import { Experience, LogoCaroussel } from './interfaces/interfaces';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +9,6 @@ import { Experience, LogoCaroussel, navbarItem } from './interfaces/interfaces';
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'portfolio';
   private experienceItems?: NodeListOf<Element>;
-
-  public navbarItems: navbarItem[] = [
-    { name: 'Experiencia', hrefId: 'Experiencia'},
-    { name: 'Proyectos', hrefId: 'Proyectos'},
-    { name: 'Sobre mí', hrefId: 'SobreMi'},
-    { name: 'Contacto', hrefId: 'Contacto'},
-  ]
 
   public experienceInfo: Experience[] = [
     {
@@ -36,36 +29,22 @@ export class AppComponent implements OnInit, AfterViewInit {
   ];
 
   public logosInfo : LogoCaroussel[] = [
-    { src: '/assets/resources/TypeScript-3090624194.png', alt: 'Icono de Typescript'},
-    { src: '/assets/resources/angular_black.png', alt: 'Icono de Angular'},
-    { src: '/assets/resources/html.png', alt: 'Icono de HTML'},
-    { src: '/assets/resources/icons8-mysql-logo-100.png', alt: 'Icono de Mysql'},
-    { src: '/assets/resources/css.png', alt: 'Icono de CSS'},
-    { src: '/assets/resources/ionic dark logo black.png', alt: 'Icono de Ionic'},
-    { src: '/assets/resources/Git-Icon-Black.png', alt: 'Icono de Git'},
-    { src: '/assets/resources/icons8-java-logo-50.png', alt: 'Icono de Java'},
-    { src: '/assets/resources/vuejs.png', alt: 'Icono de Vue'},
+    { src: '/assets/svg/Typescript-logo.svg', alt: 'Icono de Typescript'},
+    { src: '/assets/svg/Angular-logo.svg', alt: 'Icono de Angular'},
+    { src: '/assets/svg/Html-logo.svg', alt: 'Icono de HTML'},
+    { src: '/assets/svg/Mysql-logo.svg', alt: 'Icono de Mysql'},
+    { src: '/assets/svg/CSS-3-logo.svg', alt: 'Icono de CSS'},
+    { src: '/assets/svg/Ionic-logo.svg', alt: 'Icono de Ionic'},
+    { src: '/assets/svg/Git-logo.svg', alt: 'Icono de Git'},
+    { src: '/assets/svg/Java-logo.svg', alt: 'Icono de Java'},
+    { src: '/assets/svg/Vue-js-logo.svg', alt: 'Icono de Vue'},
+    { src: '/assets/svg/Javascript-logo.svg', alt: 'Icono de Javascript'},
   ];
-
-  public isMenuOpen: boolean = false;
 
   ngOnInit(): void {
     
   }
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-
-    const body = document.body as HTMLElement;
-
-    if (window.innerWidth >= 960) {
-      if (!this.isMenuOpen) {
-        document.body.classList.remove('no-scroll');
-      }
-  
-      document.body.classList.add('no-scroll');
-    }
-  }
   isElementInViewport(el: Element):boolean {
         const rect = el.getBoundingClientRect();
         return (
@@ -88,15 +67,4 @@ export class AppComponent implements OnInit, AfterViewInit {
     ngAfterViewInit(): void {
       this.experienceItems = document.querySelectorAll(".experience-content-item");
     }
-
-    goToSection(id: string) {
-      let el = document.getElementById(id);
-      if(!el) return;
-      window.scrollTo({
-        left: el.offsetLeft,
-        top: el.offsetTop,
-        behavior: 'smooth'
-      });
-    }
-
 }
