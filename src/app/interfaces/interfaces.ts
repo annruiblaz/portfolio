@@ -14,3 +14,22 @@ export interface StackLogo {
     alt: string;
     color: string;
 }
+
+export interface Project {
+    title: string;
+    subtitle: string;
+    img: string[];
+    stackUsed: StackProject[];
+}
+
+export interface StackProject {
+    name: string;
+    color: string;
+}
+
+export interface Study {
+    logo: string;
+    location: string;
+    name: string;
+    date: string;
+}

@@ -13,7 +13,7 @@ export class StackComponent {
     { src: '/assets/svg/Angular-logo.svg', alt: 'Icono de Angular', color: 'rgba(157, 2, 8, 0.5)'},
     { src: '/assets/svg/Mysql-logo.svg', alt: 'Icono de Mysql', color: 'rgba(0, 165, 207, 0.5)'},
     { src: '/assets/svg/Html-logo.svg', alt: 'Icono de HTML', color: 'rgba(4, 102, 200, 0.5)'},
-    { src: '/assets/svg/CSS-3-logo.svg', alt: 'Icono de CSS', color: 'rgba(255, 219, 46, 0.5)'},
+    { src: '/assets/svg/css-logo.svg', alt: 'Icono de CSS', color: 'rgba(255, 219, 46, 0.5)'},
     { src: '/assets/svg/Ionic-logo.svg', alt: 'Icono de Ionic', color: 'rgba(0, 165, 207, 0.5)'},
     { src: '/assets/svg/Git-logo.svg', alt: 'Icono de Git', color: 'rgba(4, 102, 200, 0.5)'},
     { src: '/assets/svg/Java-logo.svg', alt: 'Icono de Java', color: 'rgba(157, 2, 8, 0.5)'},

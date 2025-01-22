@@ -1,1 +1,13 @@
-<p>studies works!</p>
+<h2>Formación</h2>
+
+<div
+    *ngFor="let study of studies"
+    class="study-card"
+>
+    <img class="study-card-logo" [src]="study.logo">
+    <div class="study-card-content">
+        <div class="study-card-location">{{study.location}}</div>
+        <div class="study-card-name">{{study.name}}</div>
+        <div class="study-card-dates">{{study.date}}</div>
+    </div>
+</div>
