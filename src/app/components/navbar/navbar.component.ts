@@ -9,9 +9,10 @@ import { navbarItem } from '../../interfaces/interfaces';
 export class NavbarComponent {
   public navbarItems: navbarItem[] = [
     { name: 'Experiencia', hrefId: 'Experiencia'},
+    { name: 'Tecnologías', hrefId: 'Tecnologias'},
     { name: 'Proyectos', hrefId: 'Proyectos'},
-    { name: 'Sobre mí', hrefId: 'SobreMi'},
-    { name: 'Contacto', hrefId: 'Contacto'},
+    { name: 'Formación', hrefId: 'Formacion'},
+    //{ name: 'Contacto', hrefId: 'Contacto'},
   ];
 
   public isMenuOpen: boolean = false;
@@ -32,6 +33,10 @@ export class NavbarComponent {
   }
 
   goToSection(id: string) {
+    if(window.innerWidth <= 960) {
+      this.toggleMenu();
+    }
+
     let el = document.getElementById(id);
     if(!el) return;
     window.scrollTo({

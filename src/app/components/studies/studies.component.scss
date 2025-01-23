@@ -1,5 +1,5 @@
 .study-card {
-    width: 100%;
+    width: 90%;
     height: auto;
     padding: 20px 15px;
     margin: 20px auto;
@@ -40,15 +40,16 @@
     }
 
     &-name {
-        font-size: 14px;
-        
+        margin-top: 5px;
+        font-size: 16px;
+
         @media (min-width: 960px) {
             font-size: 34px;
         }
     }
 
     &-dates {
-        font-size: 12px;
+        font-size: 14px;
         
         @media (min-width: 960px) {
             font-size: 30px;
