@@ -10,6 +10,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { StackComponent } from './components/stack/stack.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { StudiesComponent } from './components/studies/studies.component';
+import { ContactRrssComponent } from './components/contact-rrss/contact-rrss.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StudiesComponent } from './components/studies/studies.component';
     ExperienceComponent,
     StackComponent,
     ProjectsComponent,
-    StudiesComponent
+    StudiesComponent,
+    ContactRrssComponent
   ],
   imports: [
     BrowserModule,
