@@ -12,7 +12,7 @@ export class ProjectsComponent {
     {
       title: 'PréstameYA!',
       subtitle: 'WebApp para facilitar tomar prestados objetos de amigos durante el tiempo acordado entre ambos.',
-      img: ['/assets/images/mockaup-prestameYa-1.png','/assets/images/mockaup-prestameYa-2.png'],
+      img: ['assets/images/mockaup-prestameYa-1.png','assets/images/mockaup-prestameYa-2.png'],
       stackUsed: [
         { name: 'Angular', color: 'red'},
         { name: 'Ionic', color: 'blue'}

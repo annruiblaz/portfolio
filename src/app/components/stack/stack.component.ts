@@ -9,16 +9,16 @@ import { StackLogo } from '../../interfaces/interfaces';
 export class StackComponent {
 
   public logosInfo : StackLogo[] = [
-    { src: '/assets/svg/Typescript-logo.svg', alt: 'Icono de Typescript', color: 'rgba(255, 219, 46, 0.5)'},
-    { src: '/assets/svg/Angular-logo.svg', alt: 'Icono de Angular', color: 'rgba(157, 2, 8, 0.5)'},
-    { src: '/assets/svg/Mysql-logo.svg', alt: 'Icono de Mysql', color: 'rgba(0, 165, 207, 0.5)'},
-    { src: '/assets/svg/Html-logo.svg', alt: 'Icono de HTML', color: 'rgba(4, 102, 200, 0.5)'},
-    { src: '/assets/svg/css-logo.svg', alt: 'Icono de CSS', color: 'rgba(255, 219, 46, 0.5)'},
-    { src: '/assets/svg/Ionic-logo.svg', alt: 'Icono de Ionic', color: 'rgba(0, 165, 207, 0.5)'},
-    { src: '/assets/svg/Git-logo.svg', alt: 'Icono de Git', color: 'rgba(4, 102, 200, 0.5)'},
-    { src: '/assets/svg/Java-logo.svg', alt: 'Icono de Java', color: 'rgba(157, 2, 8, 0.5)'},
-    { src: '/assets/svg/Vue-js-logo.svg', alt: 'Icono de Vue', color: 'rgba(88, 157, 125, 0.6)'},
-    { src: '/assets/svg/Javascript-logo.svg', alt: 'Icono de Javascript', color: 'rgba(255, 219, 46, 0.5)'},
+    { src: 'assets/svg/Typescript-logo.svg', alt: 'Icono de Typescript', color: 'rgba(255, 219, 46, 0.5)'},
+    { src: 'assets/svg/Angular-logo.svg', alt: 'Icono de Angular', color: 'rgba(157, 2, 8, 0.5)'},
+    { src: 'assets/svg/Mysql-logo.svg', alt: 'Icono de Mysql', color: 'rgba(0, 165, 207, 0.5)'},
+    { src: 'assets/svg/Html-logo.svg', alt: 'Icono de HTML', color: 'rgba(4, 102, 200, 0.5)'},
+    { src: 'assets/svg/css-logo.svg', alt: 'Icono de CSS', color: 'rgba(255, 219, 46, 0.5)'},
+    { src: 'assets/svg/Ionic-logo.svg', alt: 'Icono de Ionic', color: 'rgba(0, 165, 207, 0.5)'},
+    { src: 'assets/svg/Git-logo.svg', alt: 'Icono de Git', color: 'rgba(4, 102, 200, 0.5)'},
+    { src: 'assets/svg/Java-logo.svg', alt: 'Icono de Java', color: 'rgba(157, 2, 8, 0.5)'},
+    { src: 'assets/svg/Vue-js-logo.svg', alt: 'Icono de Vue', color: 'rgba(88, 157, 125, 0.6)'},
+    { src: 'assets/svg/Javascript-logo.svg', alt: 'Icono de Javascript', color: 'rgba(255, 219, 46, 0.5)'},
   ];
 
   getShadow(color: string):string {
