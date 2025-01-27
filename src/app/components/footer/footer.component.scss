@@ -6,6 +6,17 @@
         height: 350px;
         text-align: center;
         align-content: end;
+        background-image: radial-gradient(ellipse at 50% 60%, #ade6eb, #FFF, #FFF);
+
+/*         background-image: url('assets/images/gradient.png');
+ */    }
+
+    &-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        object-fit: cover;
     }
 
     &-title {
@@ -24,7 +35,7 @@
         justify-content: center;
         padding-bottom: 50px;
 
-        &::after {
+/*         &::after {
             position: absolute;
             content: '';
             bottom: 0;
@@ -35,9 +46,9 @@
             background: #EFFAFB;
             border-radius: 50%;
             transform: translateY(180px) translate(-40px);
-        }
+        } */
     }
-
+/* 
     img {
         &::after{
             position: absolute;
@@ -48,7 +59,7 @@
             border: 1px solid red;
             border-radius: 100%;
         }
-    }
+    } */
 
     &-icon {
         position: relative;

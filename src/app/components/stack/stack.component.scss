@@ -20,18 +20,44 @@
         width: 60px;
         height: 60px;
         transition: filter .3s ease-in-out;
-        filter: var(--drop-shadow);
 
         @media (min-width: 960px) {
-            filter: none;
             width: 80px;
             height: 80px;
         }
-
-        &:hover {
-            @media (min-width: 960px) {
-                filter: var(--drop-shadow);
-            }
-        }
     }
 }
+
+.logo-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-container:hover {
+    transform: scale(1.1);
+  }
+  
+  .logo-container::before {
+    content: '';
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    width: 60px;
+    height: 60px;
+    background: var(--background, transparent);
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+    border-radius: 50%;
+  }
+  
+  .logo-container:hover::before {
+    opacity: .8;
+  }
