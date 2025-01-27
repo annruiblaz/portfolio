@@ -1,7 +1,16 @@
+.studies-container {
+    margin: 0;
+    width: 100%;
+
+    @media (min-width: 960px) {
+        max-width: 1024px;
+    }
+}
+
 .study-card {
-    width: 96%;
+    width: 100%;
     height: auto;
-    padding: 20px 15px;
+    padding: 20px 0;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
@@ -26,9 +35,10 @@
 
     &-content {
         text-align: center;
+        margin: 0 10px;
 
         @media (min-width: 960px) {
-            margin-right: 40px;
+            margin-left: 20px;
             text-align: left;
         }
     }
