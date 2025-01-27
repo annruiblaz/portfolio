@@ -8,13 +8,12 @@
             <img *ngIf="project.urlDemo" class="demo-logo" src="/assets/svg/demo.svg">
             <img *ngIf="!project.urlGithub" class="under-construction-logo" src="/assets/svg/tool.svg">
         </div>
-
-        <div class="project-card-title">{{project.title}}</div>
     </div>
+
     <div class="project-card-img">
         <img [src]="project.img[1]">
     </div>
-    
+
+    <div class="project-card-title">{{project.title}}</div>
     <div class="project-card-subtitle">{{project.subtitle}}</div>
-<!--     <img [src]="project.img[1]">
- --></div>
+</div>

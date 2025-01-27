@@ -1,7 +1,7 @@
 .project-card {
     height: auto;
     width: 100%;
-    min-height: 600px;
+    min-height: 500px;
     border-radius: 20px;
     background-color: #FFF;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -83,11 +83,12 @@
     img {
         width: 250px;
         height: auto;
-        object-fit: cover;
+        max-height: 400px;
+        object-fit: contain;
 
         @media (min-width: 960px) {
             position: absolute;
-            top: 80px;
+            top: 50px;
             right: 80px;
         }
     }
