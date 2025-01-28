@@ -1,53 +1,88 @@
 .project-card {
+    padding: 10px 0;
+    margin-bottom: 30px;
     height: auto;
     width: 100%;
     min-height: 500px;
     border-radius: 20px;
     background-color: #FFF;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 5px;
+    align-content: center;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-items: start;
+    }
 
     @media (min-width: 960px) {
-        position: relative;
         height: auto;
         width: 100%;
         max-width: 1024px;
-        margin: 0 auto;
-    }
-
-    &-header {
-        display: flex;
-        gap: 15px;
-        padding-top: 20px;
-        justify-content: center;
-        align-items: flex-start;
-
-        @media (min-width: 960px) {
-            justify-content: flex-start;
-        }
+        margin: 0 auto 40px;
     }
 
     &-title {
+        margin: 10px 15px;
         font-size: 32px;
-        padding-bottom: 10px;
+        font-weight: 600;
+        grid-column: 1 / span 3;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            padding: 50px 30px 0;
+            margin-top: 0;
+            max-width: 320px;
+            font-size: 32px;
+            text-align: left;
+        }
 
         @media (min-width: 960px) {
-            padding: 50px 30px 0;
-            max-width: 650px;
+            max-width: 550px;
             font-size: 48px;
         }
     }
 
     &-subtitle {
+        margin: 10px 15px;
         font-size: 14px;
-        padding: 20px 15px;
-        text-align: center;
+        text-align: left;
+
+        order: 4;
+        grid-column: 1 / span 3;
+
+        @media (min-width: 768px) {
+            padding: 0 30px 20px;
+            margin-top: 0;
+            max-width: 320px;
+            font-size: 24px;
+            text-align: left;
+            order: 3;
+            grid-column: 2 / 3;
+        }
 
         @media (min-width: 960px) {
-            padding: 10px 30px 20px;
-            max-width: 650px;
+            max-width: 580px;
             font-size: 32px;
-            text-align: left;
         }
+    }
+
+    .link-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        order: 5;
+        grid-column: 1 / span 3;
+    
     }
 
     .github-logo,
@@ -58,8 +93,8 @@
     .github-logo,
     .demo-logo,
     .under-construction-logo {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         transition: 0.6s transform ease-in-out, 0.2s filter ease-in-out;
 
         &:hover {
@@ -67,17 +102,50 @@
             transform: scale(1.1);
         }
 
-        @media (min-width: 960px) {
+        @media (min-width: 768px) {
             position: absolute;
-            right: 20px;
-            top: 20px;
+            right: 30px;
+            top: 25px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .demo-logo {
+        width: 34px;
+        height: 34px;
+
+        @media (min-width: 768px) {
+            top: 80px;
+            right: 23px;
             width: 50px;
             height: 50px;
         }
     }
 
+    .under-construction-logo {
+        width: 38px;
+        height: 38px;
+
+        &:hover {
+            animation: moveTool 1.5s ease-in-out infinite;
+        }
+
+        @media (min-width: 768px) {
+            width: 50px;
+            height: 58px;
+        }
+    }
+
     &-img {
         text-align: center;
+        order: 3;
+        grid-column: 1 / span 3;
+
+        @media (min-width: 768px) {
+            order: 3;
+            grid-column: 1 / 2;
+        }
     }
 
     img {
@@ -86,10 +154,19 @@
         max-height: 400px;
         object-fit: contain;
 
-        @media (min-width: 960px) {
+        @media (min-width: 768px) {
             position: absolute;
             top: 50px;
             right: 80px;
         }
+    }
+}
+
+@keyframes moveTool {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg) scale(1.1);
     }
 }

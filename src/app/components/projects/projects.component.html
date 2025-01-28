@@ -2,18 +2,21 @@
 
 <div *ngFor="let project of projectItems" class="project-card">
 
-    <div class="project-card-header">
-        <div class="link-icons">
-            <img *ngIf="project.urlGithub" class="github-logo" src="assets/svg/Github-logo.svg">
-            <img *ngIf="project.urlDemo" class="demo-logo" src="assets/svg/demo.svg">
-            <img *ngIf="!project.urlGithub" class="under-construction-logo" src="assets/svg/tool.svg">
-        </div>
-    </div>
-
-    <div class="project-card-img">
-        <img [src]="project.img[1]">
+    <div class="link-icons">
+        <a *ngIf="project.urlGithub" [href]="project.urlGithub">
+            <img  class="github-logo" src="assets/svg/Github-logo.svg">
+        </a>
+        <a *ngIf="project.urlDemo" [href]="project.urlDemo">
+            <img  class="demo-logo" src="assets/svg/Open-demo.svg">
+        </a>
+        <img *ngIf="!project.urlGithub" class="under-construction-logo" src="assets/svg/Tool.svg">
     </div>
 
     <div class="project-card-title">{{project.title}}</div>
     <div class="project-card-subtitle">{{project.subtitle}}</div>
+        
+    <div class="project-card-img">
+        <img [src]="project.img[0]">
+    </div>
+
 </div>

@@ -26,7 +26,7 @@
     z-index: 15;
     position: fixed;
     top: 20px;
-    left: 10px;
+    right: 10px;
     width: 35px;
     height: 35px;
     border: none;
@@ -37,7 +37,7 @@
     cursor: pointer;
     filter: drop-shadow(0px 0px 2px #2FB7C3);
 
-    svg {
+    img {
         width: 20px;
         height: 20px;
     }
@@ -69,8 +69,13 @@
     max-width: 1024px;
     margin: 0 auto;
     transform: none;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
 }
+
+    @media (min-width: 1440px) {
+        justify-content: space-between;
+    }
 }
 
 .open {
@@ -110,7 +115,7 @@ color: #040F10;
 font-size: 24px;
 font-weight: 500;
 text-decoration: none;
-transition: font-weight .2s ease-in-out;
+transition: color .2s ease-in-out;
 
 @media (min-width: 960px) {
     display: inline;
@@ -122,7 +127,7 @@ transition: font-weight .2s ease-in-out;
 }
 
 &:hover {
-    font-weight: 600;
+    color: #103E42;
 }
 
 &:last-child {
@@ -136,6 +141,7 @@ transition: font-weight .2s ease-in-out;
     transition: .6s transform ease-in-out, .2s filter ease-in-out;
 
     &:hover {
+        color: #103E42;
         filter: drop-shadow(0px 0px 10px #2FB7C3);
         transform: scale(1.1);
     }

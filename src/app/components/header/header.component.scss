@@ -6,15 +6,37 @@
     justify-content: center;
     text-align: center;
 
-    @media (min-width: 960px) {
+    @media (min-width: 768px) {
         flex-direction: row;
         text-align: left;
+    }
+
+    &-text-container {
+        text-align: left;
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     &-title {
         display: inline-flex;
         gap: 20px;
         font-size: 48px;
+
+        @media (min-width: 960px) {
+            font-size: 60px;
+        }
+    }
+
+    &-subtitle {
+        font-size: 32px;
+
+        p:last-child {
+            font-size: 24px;
+        }
 
         @media (min-width: 960px) {
             font-size: 60px;

@@ -16,7 +16,7 @@ export class StackComponent {
     { src: 'assets/svg/Ionic-logo.svg', alt: 'Icono de Ionic', color: '#498aff'},
     { src: 'assets/svg/Git-logo.svg', alt: 'Icono de Git', color: '#f1502f'},
     { src: 'assets/svg/Java-logo.svg', alt: 'Icono de Java', color: 'rgba(0,115,150,1)'},
-    { src: 'assets/svg/Vue-js-logo.svg', alt: 'Icono de Vue', color: 'linear-gradient(180dg, rgba(52,73,94,1) 0%, rgba(65,184,131,1) 100%)'},
+    { src: 'assets/svg/Vue-js-logo.svg', alt: 'Icono de Vue', color: 'rgba(65,184,131,1)'},
     { src: 'assets/svg/Javascript-logo.svg', alt: 'Icono de Javascript', color: '#f0db4f'},
     { src: 'assets/svg/Figma-logo.svg', alt: 'Icono de Figma', color: 'linear-gradient(180deg, rgba(242,78,30,1) 0%, rgba(255,114,98,1) 19%, rgba(162,89,255,1) 50%, rgba(26,188,254,1) 69%, rgba(10,207,131,1) 83%)'},
     { src: 'assets/svg/Sass-logo.svg', alt: 'Icono de Sass', color: '#CD6799'},

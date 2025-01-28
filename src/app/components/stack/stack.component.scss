@@ -6,13 +6,14 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 50px;
+    grid-row-gap: 30px;
     justify-items: center;
     align-items: center;
     
     @media (min-width: 768px) {
         max-width: 1024px;
         grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: 50px;
         grid-column-gap: 100px;
     }
 
@@ -33,10 +34,10 @@
       &::before {
         content: '';
         position: absolute;
-        left: 10px;
-        top: 10px;
-        width: 60px;
-        height: 60px;
+        left: 15px;
+        top: 15px;
+        width: 50px;
+        height: 50px;
         background: var(--background, transparent);
         filter: blur(14px);
         opacity: .5;
@@ -45,6 +46,10 @@
         border-radius: 50%;
 
         @media (min-width: 960px) {
+          left: 10px;
+          top: 10px;
+          width: 60px;
+          height: 60px;
           opacity: 0;
         }
       }
