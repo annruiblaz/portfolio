@@ -3,14 +3,17 @@
 <div *ngFor="let project of projectItems" class="project-card">
 
     <div class="project-card-header">
-        <img class="github-logo" src="assets/svg/Github-logo.svg">
-
-        <div class="project-card-title">{{project.title}}</div>
+        <div class="link-icons">
+            <img *ngIf="project.urlGithub" class="github-logo" src="/assets/svg/Github-logo.svg">
+            <img *ngIf="project.urlDemo" class="demo-logo" src="/assets/svg/demo.svg">
+            <img *ngIf="!project.urlGithub" class="under-construction-logo" src="/assets/svg/tool.svg">
+        </div>
     </div>
+
     <div class="project-card-img">
         <img [src]="project.img[1]">
     </div>
-    
+
+    <div class="project-card-title">{{project.title}}</div>
     <div class="project-card-subtitle">{{project.subtitle}}</div>
-<!--     <img [src]="project.img[1]">
- --></div>
+</div>

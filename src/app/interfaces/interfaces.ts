@@ -20,6 +20,8 @@ export interface Project {
     subtitle: string;
     img: string[];
     stackUsed: StackProject[];
+    urlGithub?: string;
+    urlDemo?: string;
 }
 
 export interface StackProject {

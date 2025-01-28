@@ -9,6 +9,26 @@
 body {
     margin: 0;
     padding: 0;
+
+    //background-image: url('assets/images/gradient.png');
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background: #FFF; 
+    }
+    
+    &::-webkit-scrollbar-track {
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ADE6EB;
+        border-radius: 20px;
+    }
 }
 
 body.no-scroll {

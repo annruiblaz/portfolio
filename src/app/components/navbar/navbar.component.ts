@@ -11,8 +11,7 @@ export class NavbarComponent {
     { name: 'Experiencia', hrefId: 'Experiencia'},
     { name: 'Tecnologías', hrefId: 'Tecnologias'},
     { name: 'Proyectos', hrefId: 'Proyectos'},
-    { name: 'Formación', hrefId: 'Formacion'},
-    //{ name: 'Contacto', hrefId: 'Contacto'},
+    { name: 'Formación', hrefId: 'Formacion'}
   ];
 
   public isMenuOpen: boolean = false;
