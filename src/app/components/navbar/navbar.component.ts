@@ -22,12 +22,7 @@ export class NavbarComponent {
     const body = document.body as HTMLElement;
 
     if (window.innerWidth <= 960) {
-      if (!this.isMenuOpen) {
-        document.body.classList.remove('no-scroll');
-        return;
-      }
-
-      document.body.classList.add('no-scroll');
+      body.classList.toggle('no-scroll', this.isMenuOpen);
     }
   }
 
@@ -38,6 +33,7 @@ export class NavbarComponent {
 
     let el = document.getElementById(id);
     if(!el) return;
+
     window.scrollTo({
       left: el.offsetLeft,
       top: el.offsetTop,

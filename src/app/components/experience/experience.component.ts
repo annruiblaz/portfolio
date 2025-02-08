@@ -10,12 +10,12 @@ export class ExperienceComponent {
 
   public experienceInfo: Experience[] = [
     {
-      title: 'Junior Web Frontend',
+      title: 'Junior Frontend Web Dev',
       company: 'We Are Marketing - WAM Global',
       dates: 'Junio 2024 - Diciembre 2024'
     },
     {
-      title: 'Prácticas en Web Frontend',
+      title: 'Prácticas en Frontend Web',
       company: 'We Are Marketing - WAM Global',
       dates: 'Marzo 2024 - Junio 2024'
     },
